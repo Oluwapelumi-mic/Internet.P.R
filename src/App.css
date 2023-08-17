@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Space+Grotesk&display=swap')
+
+* {
+    box-sizing: border-box;
+}
+.App{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0;
+    width: 100%;
+    height: 971.378px;
+}
+.empty-task{
+    width: 356px;
+    margin-top: 167px;
+    margin-left: 390px;
+
+}
+.active-task{
+    width: 227.167px;
+    height: 135.353px;
+    flex-shrink: 0;
+    margin-left: 64px;
+    margin-right: 64px;
+}
+.empty-text{
+    width: 254px;
+    height: 46px;
+    color: #0D0A19;
+    font-family: 'Inter',sans-serif;
+    font-size: 32.075px;
+    margin-left: 51px;
+    margin-right: 51px;
+    margin-bottom: 0px;
+}
+.empty-p {
+    width: 356px;
+    height: 40px;
+    color: #9A9EA7;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Inter',sans-serif;
+    font-size: 13.251px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.877px;
+    letter-spacing: -0.095px;
+    margin-top: 0px;
+}
+.create-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: rgba(227, 232, 242, 0.7);
+    backdrop-filter: blur(7.5833330154418945px);
+ }
+
+.create{
+    width: 550.194px;
+    height: 529.885px;
+    flex-shrink: 0;
+    position: absolute;
+    border-radius: 11.375px;
+    background: #FFF;
+    margin-top: 192px;
+    margin-left: 410px;
+    margin-bottom: 270px;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 15.7px;
+    margin-top: 15.17px;
+}
+.add-task {
+    width: 130px;
+    height: 37.1px;
+    gap: 12.32px;
+    display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
