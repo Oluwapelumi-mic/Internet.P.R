@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Space+Grotesk&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    width: 75.6em;
+    padding: 18.972px 22.767px 18.024px 0px;
+    align-items: center;
+    gap: 33.201px;
+}
+.TaskCount{
+    margin-right: 5rem;
+    margin-left: 2rem;
+    display: flex;
+    width: 47.73em;
+    align-items: center;
+    gap: 2.846px;
+    flex-shrink: 0;
+}
+.one {
+    font-family:'Space Grotesk', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-top: 0.681em;
+}
+.count {
+    padding: 0.113rem 0.488rem;
+    border-radius: 0.948em;
+    background: rgba(98, 190, 218, 0.1);
+    border: 0.125em solid transparent; 
+    border-radius: 0.625em;
+    color: #53B0CC;
+}
+.buttons{
+    display: flex;
+    width: 14.7em;
+    height: 2.61em;
+    gap: 0.47em;
+}
+.export-container {
+    display: flex;
+    height:2.61em;
+    width: 5.944em;
+    padding: 0.593em 0.949em;
+    justify-content: center;
+    align-items: center;
+    gap: 0.474em;
+    border-radius: 0.474em;
+    border: 0.059em solid #E6E7EC;
+    background: #FFF;
+
+}
+.export-image{
+    width: 0.949em;
+    height: 0.949em;
+}
+.export {
+    color: #0E2354;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.83em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.186em;
+    text-decoration: none;
+}
+.create-container {
+    width: 8.25em;
+    display: flex;
+    height: 2.61em;
+    padding: 0.493em 0.849em;
+    justify-content: center;
+    align-items: center;
+    gap: 0.474em;
+    border-radius: 0.474em;
+    background: #001C80;
+}
+.create-image {
+    width: 0.949em;
+    height: 0.949em;
+}
+.create {
+    background-color: #001C80;
+    color: #FFF;
+    font-family: 'Inter' sans-serif;
+    font-size: 0.80em;
+    font-style: normal;
+    font-weight: 370;
+    text-decoration: none;
+    border: 0;
+    width: 100%;
+    height: 2.61em;
+}
