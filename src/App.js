@@ -11,7 +11,7 @@ import EmptyTask from "./components/Tasks/EmptyTask";
 
 function App() {
   return ( 
-    <div className="App">
+    <div className="App"> 
       <Router>
         <div className="App-header">
           <SideNav />
@@ -20,6 +20,7 @@ function App() {
           <Header  />
           <Routes>
             <Route path="/task" element={<><TaskHeader /> <EmptyTask/></>} />
+            
           </Routes>
         </div>
       </Router>
