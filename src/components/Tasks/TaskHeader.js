@@ -5,7 +5,7 @@ import { useState } from "react";
 import CreateTask from "./CreateTask";
 
 
-export default function TaskHeader() {
+export default function TaskHeader({setTasks}) {
   const [openTask, setOpenTask] = useState(false);
   return (
     <div className="task-header">
@@ -32,7 +32,7 @@ export default function TaskHeader() {
           </button>
         </div>
         <Modal open={openTask} >
-        <CreateTask setOpenTask={setOpenTask} />
+        <CreateTask setOpenTask={setOpenTask} setTasks={setTasks}/>
         </Modal>
       </div>
     </div>
