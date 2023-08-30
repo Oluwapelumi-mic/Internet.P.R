@@ -3,7 +3,9 @@ import { img17 } from "./../../images";
 import { img18 } from "./../../images";
 import { img19 } from "./../../images";
 
+
 export default function CreatedTask({setIsSuccessful}) {
+
   return (
     <div className="create2">
       <div className="heading1">
@@ -24,7 +26,7 @@ export default function CreatedTask({setIsSuccessful}) {
         </p>
         <div className="okay-btn">
           <button onClick={() => {
-                    setIsSuccessful(false);
+                    setIsSuccessful(false)  ;
                   }} type="submit" className="okay">
             Okay
           </button>

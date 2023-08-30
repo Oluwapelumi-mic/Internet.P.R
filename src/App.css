@@ -8,7 +8,6 @@
     display: flex;
     flex-direction: row;
     text-align: center;
-
 }
 .App-header{
     width: 14.51em;
@@ -539,7 +538,7 @@ body {
     align-items: center;
     align-self: stretch;
     justify-content: center;
-    padding: 0.95em 1.025em;
+    padding: 0.05em 1.025em;
     border-bottom: 0.078em solid #EAECF0;
 }
 .title-content {
@@ -595,7 +594,7 @@ body {
 }
 .status-content{
     display: flex;
-    padding: 0.119em 0.374em 0.119em 0.376em;
+    padding: 0.105em 0.374em 0.105em 0.376em;
     justify-content: center;
     align-items: center;
     gap: 0.376em;
@@ -614,8 +613,115 @@ body {
 }
 .sucess{
     align-items: center;
-    padding-top: 1.999em;
+    padding-top: 0.105em;
 }
-
-
-
+.create3 {
+    display: flex;
+    flex-direction: column;
+    width: 34.275em;
+    height: 37.875em;
+    border-radius: 0.737em;
+    background: #FFF;
+    box-shadow: 0em -0.368em 1.228em 0em rgba(13, 10, 25, 0.10);
+}
+.level1 {
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    width: 34.338em;
+    height: 4.421em;
+    opacity: 0.0001em;
+    border-bottom: 0.083em solid #EEE;
+    padding-right: 1.563em;
+    gap: 11em;
+}
+.level1-text {
+    align-self: center;
+    justify-self: center;
+    color: #0D0A19;
+    text-align: center;
+    font-family:' Inter',sans-serif;
+    font-style: normal;
+    font-size: 1.425em;
+    font-weight: 700;
+    margin: 0;
+}  
+.exit2{
+    color: #0D0A19;
+    height: 1.275em;
+    width: 1.275em;
+}
+.level3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.635em;
+    margin-right: 2.625em;
+    margin-top: 2.675em;
+}
+.editButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    border: 0.083em solid #001C80;
+    color: #5F2EE5;
+    font-family: 'Inter',sans-serif;
+    font-size: 1.125em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.66em;
+    height: 3.313em;
+    width: 6.75em;
+    padding: 0.92em 2.01em;
+    border-radius: 0.66em;
+    box-shadow: 0em 0.083em 0em 0em rgba(0, 0, 0, 0.05);
+}
+.okayButton{ 
+    background: #001C80;
+    border: 0.083em solid #001C80;
+    width: 18.75em;
+    height: 3.313em;
+    border-radius: 0.614em;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 1.125em;
+}
+.level2 {
+    padding: 1.75em 1.75em 1.75em 1.75em;
+} 
+.level-list{
+    list-style: none;
+    align-items: flex-start;
+    gap: 2em;
+}
+.LL1{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.list-left{
+    display: flex;
+    gap: 1.063em ;
+}
+.list-text {
+    color: #0D0A19;
+    font-family: 'DM Sans',sans-serif;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.56em;
+}
+.list-content {
+    color: #9A9EA7;
+    font-family: 'Inter',sans-serif;
+    font-size: 0.745em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.01em;
+    letter-spacing: -0.006em;
+}
+.list-content2{
+    
+}

@@ -1,18 +1,19 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import EmptyTask from "./EmptyTask";
 import { img10 } from "../../images";
 import { img20 } from "../../images";
 import { img21 } from "../../images";
 import { img22 } from "../../images";
 import { img23 } from "../../images";
-import { img24, img25 } from "../../images";
+import { img24, img25,img26 } from "../../images";
 import TaskHeader from "./TaskHeader";
+import Modal from "./Modals";
+import TaskDetails from "./TaskDetails";
 
 export default function TaskList() {
   const [tasks, setTasks] = useState([]);
+  const [OpenDetails, setOpenDetails] = useState(false);
 
   return (
     <>
@@ -66,7 +67,9 @@ export default function TaskList() {
               <>
                 <>
                   {tasks.map((state, i) => (
-                    <tr>
+                    <tr onClick={() => {
+                      setOpenDetails(true);
+                    }}>
                       <td className="name-content">
                         <ul className="tasklists">
                           <li className="list1">
@@ -93,8 +96,9 @@ export default function TaskList() {
                           {state.status}
                         </div>
                       </td>
-                      <td className="project-container">
-                        <img src={img25} className="sucess" />
+                      <td className="project-container"><div className="sucess">
+                        {state.status ==='completed'? <img src={img25} className="sucess" alt=""/> : <img src={img26} className="sucess" alt=""/>}
+                        </div>
                       </td>
                     </tr>
                   ))}
@@ -102,6 +106,9 @@ export default function TaskList() {
               </>
             </tbody>
           </table>
+          <Modal open={OpenDetails}>
+        <TaskDetails setOpenDetails={setOpenDetails} />
+      </Modal>
         </div>
       )}
     </>

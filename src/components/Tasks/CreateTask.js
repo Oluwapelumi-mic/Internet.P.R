@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from 'react-router-dom'
 import CreatedTask from "./CreatedTask";
 import Modal from "./Modals";
 import { useState } from "react";
@@ -8,20 +7,20 @@ import { img16, img17 } from "./../../images";
 export default function CreateTask({ setOpenTask, setTasks }) {
   const [isSuccessful, setIsSuccessful] = useState(false);
   const [formData, setFormData] = useState({
-    title: '',
-    body: '',
-    details: '',
-    eta: '',
-    status: '',
-  })
+    title: "",
+    body: "",
+    details: "",
+    eta: "",
+    status: "",
+  });
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTasks((prev)=>[...prev,formData])
-    setIsSuccessful(true)
-  }
+    setTasks((prev) => [...prev, formData]);
+    setIsSuccessful(true);
+  };
   const handleChange = (event) => {
-      setFormData({...formData,[event.target.name]: event.target.value});
-  }
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
   return (
     <div className="create1">
       <div className="heading">
@@ -44,11 +43,21 @@ export default function CreateTask({ setOpenTask, setTasks }) {
         <form className="ui form" onSubmit={handleSubmit}>
           <div className="field">
             <label style={{ color: "#191632" }}>Product Name</label>
-            <input type="text" name="title" placeholder="Enter Name"  onChange={handleChange}/>
+            <input
+              type="text"
+              name="title"
+              placeholder="Enter Name"
+              onChange={handleChange}
+            />
           </div>
           <div className="field">
             <label style={{ color: "#191632" }}>Project Title</label>
-            <input type="text" name="body" placeholder="Enter Title" onChange={handleChange} />
+            <input
+              type="text"
+              name="body"
+              placeholder="Enter Title"
+              onChange={handleChange}
+            />
           </div>
           <div className="field">
             <label style={{ color: "#191632" }}>Project Details</label>
@@ -67,25 +76,33 @@ export default function CreateTask({ setOpenTask, setTasks }) {
             </div>
             <div className="field1">
               <label style={{ color: "#191632" }}>Status</label>
-              <input type="text" name="status" placeholder="pending" onChange={handleChange}/>
+              <input
+                type="text"
+                name="status"
+                placeholder="pending"
+                onChange={handleChange}
+              />
             </div>
           </div>
           <div className="footer">
-              <div className="submit-task">
-                <button
-                  type="button"
-                  className="cancel"
-                  onClick={() => {
-                    setOpenTask(false);
-                  }}
-                >
-                  Cancel
-                </button>
-                <button type="submit"
-                  className="confirm">Confirm
-                </button>
-              </div>
+            <div className="submit-task">
+              <button
+                type="button"
+                className="cancel"
+                onClick={() => {
+                  setOpenTask(false);
+                }}
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                className="confirm"
+              >
+                Confirm
+              </button>
             </div>
+          </div>
         </form>
       </div>
       <Modal open={isSuccessful}>
