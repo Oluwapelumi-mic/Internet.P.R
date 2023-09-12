@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { img17, img27 } from "./../../images";
-import Modal from "./Modals";
-import CreateTask from "./CreateTask";
+import Modal from "../Tasks/Modals";
+import CreateLeave from "./CreateLeave";
 
-export default function TaskDetails({ setOpenDetails }) {
-  const [tasks] = useState([]);
-  const [OpenTask, setOpenTask] = useState(false);
+export default function LeaveDetails({setLeaveDetails}) {
+  const [leaves] = useState([]);
+  const [OpenLeave, setOpenLeave] = useState(false);
 
   return (
     <div className="create3">
       <div className="level1">
-        <p className="level1-text"> Task Details</p>
+        <p className="level1-text"> Leave Details</p>
         <img
           onClick={() => {
-            setOpenDetails(false);
+            setLeaveDetails(false);
           }}
           src={img17}
           className="exit2"
@@ -23,7 +23,7 @@ export default function TaskDetails({ setOpenDetails }) {
       <div className="level2">
         <>
           <>
-            {tasks.map((state, i) => (
+            {leaves.map((state, i) => (
               <ul className="level-list">
                 <li className="LL1">
                   <div className="list-left">
@@ -35,16 +35,9 @@ export default function TaskDetails({ setOpenDetails }) {
                 <li className="LL1">
                   <div className="list-left">
                     <img className="ovalist" src={img27} alt="" />
-                    <p className="list-text">Project Name</p>
+                    <p className="list-text">Leave Type</p>
                   </div>
                   <div className="list-content">{state.title}</div>
-                </li>
-                <li className="LL1">
-                  <div className="list-left">
-                    <img className="ovalist" src={img27} alt="" />
-                    <p className="list-text">Title</p>
-                  </div>
-                  <div className="list-content">{state.body}</div>
                 </li>
                 <li className="LL1">
                   <div className="list-left">
@@ -56,14 +49,28 @@ export default function TaskDetails({ setOpenDetails }) {
                 <li className="LL1">
                   <div className="list-left">
                     <img className="ovalist" src={img27} alt="" />
-                    <p className="list-text">ETA</p>
+                    <p className="list-text">Start Date</p>
+                  </div>
+                  <div className="list-content">{state.body}</div>
+                </li>
+                <li className="LL1">
+                  <div className="list-left">
+                    <img className="ovalist" src={img27} alt="" />
+                    <p className="list-text">End Date</p>
+                  </div>
+                  <div className="list-content">{state.eta}</div>
+                </li>
+                <li className="LL1">
+                  <div className="list-left">
+                    <img className="ovalist" src={img27} alt="" />
+                    <p className="list-text">File Upload</p>
                   </div>
                   <div className="list-content">{state.eta}</div>
                 </li>
                 <li className="LL6">
                   <div className="list-left">
                     <img className="ovalist" src={img27} alt="" />
-                    <p className="list-text">Status</p>
+                    <p className="list-text">status</p>
                   </div>
                   <div className="complett">{state.status}</div>
                 </li>
@@ -77,7 +84,7 @@ export default function TaskDetails({ setOpenDetails }) {
           type="submit"
           className="editButton"
           onClick={() => {
-            setOpenTask(true);
+            setOpenLeave(true);
           }}
         >
           Edit
@@ -85,14 +92,14 @@ export default function TaskDetails({ setOpenDetails }) {
         <button
           className="okayButton"
           onClick={() => {
-            setOpenDetails(false);
+            setLeaveDetails(false);
           }}
         >
           Okay
         </button>
       </div>
-      <Modal open={OpenTask}>
-        <CreateTask setOpenTask={setOpenTask} />
+      <Modal open={OpenLeave}>
+        <CreateLeave setOpenLeave={setOpenLeave} />
       </Modal>
     </div>
   );

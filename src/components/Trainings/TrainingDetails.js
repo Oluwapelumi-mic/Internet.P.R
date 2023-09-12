@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { img17, img27 } from "./../../images";
-import Modal from "./Modals";
-import CreateTask from "./CreateTask";
+import Modal from "../Tasks/Modals";
+import CreateTraining from "./CreateTraining";
 
-export default function TaskDetails({ setOpenDetails }) {
-  const [tasks] = useState([]);
-  const [OpenTask, setOpenTask] = useState(false);
+export default function TrainingDetails({ setOpenTrainingDetails }) {
+  const [trainings] = useState([]);
+  const [OpenTraining, setOpenTraining] = useState(false);
 
   return (
     <div className="create3">
@@ -13,7 +13,7 @@ export default function TaskDetails({ setOpenDetails }) {
         <p className="level1-text"> Task Details</p>
         <img
           onClick={() => {
-            setOpenDetails(false);
+            setOpenTrainingDetails(false);
           }}
           src={img17}
           className="exit2"
@@ -23,7 +23,7 @@ export default function TaskDetails({ setOpenDetails }) {
       <div className="level2">
         <>
           <>
-            {tasks.map((state, i) => (
+            {trainings.map((state, i) => (
               <ul className="level-list">
                 <li className="LL1">
                   <div className="list-left">
@@ -77,7 +77,7 @@ export default function TaskDetails({ setOpenDetails }) {
           type="submit"
           className="editButton"
           onClick={() => {
-            setOpenTask(true);
+            setOpenTraining(true);
           }}
         >
           Edit
@@ -85,14 +85,14 @@ export default function TaskDetails({ setOpenDetails }) {
         <button
           className="okayButton"
           onClick={() => {
-            setOpenDetails(false);
+            setOpenTrainingDetails(false);
           }}
         >
           Okay
         </button>
       </div>
-      <Modal open={OpenTask}>
-        <CreateTask setOpenTask={setOpenTask} />
+      <Modal open={ OpenTraining }>
+        <CreateTraining setOpenTraining={ setOpenTraining } />
       </Modal>
     </div>
   );

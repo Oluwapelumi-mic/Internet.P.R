@@ -6,7 +6,7 @@ import { img20 } from "../../images";
 import { img21 } from "../../images";
 import { img22 } from "../../images";
 import { img23 } from "../../images";
-import { img24, img25,img26 } from "../../images";
+import { img24, img25, img26 } from "../../images";
 import TaskHeader from "./TaskHeader";
 import Modal from "./Modals";
 import TaskDetails from "./TaskDetails";
@@ -14,10 +14,22 @@ import TaskDetails from "./TaskDetails";
 export default function TaskList() {
   const [tasks, setTasks] = useState([]);
   const [OpenDetails, setOpenDetails] = useState(false);
+  const [checkedOne, setCheckedOne] = React.useState(false);
+  const [checkedTwo, setCheckedTwo] = React.useState(false);
+
+  const handleChangeOne = () => {
+    setCheckedOne(true);
+    setCheckedTwo(true);
+  };
+  
+
+  const handleChangeTwo = () => {
+    setCheckedTwo(!checkedTwo);
+  };
 
   return (
     <>
-      <TaskHeader setTasks={setTasks} />
+      <TaskHeader setTasks={setTasks} itemCount={tasks.length}/>
       {tasks.length === 0 ? (
         <EmptyTask />
       ) : (
@@ -52,7 +64,16 @@ export default function TaskList() {
           <table className="table">
             <thead className="table-head">
               <tr>
-                <th className="element-name">Name</th>
+                <th className="element-name">
+                  <input
+                    type="checkbox"
+                    className="checkbox"
+                    label="Value 1"
+                    value={checkedOne}
+                    onChange={handleChangeOne}
+                  />
+                  <p className="">Name</p>
+                </th>
                 <th className="element-project">Project</th>
                 <th className="element-title">Title</th>
                 <th className="element-details">
@@ -66,11 +87,16 @@ export default function TaskList() {
             <tbody className="table-body">
               <>
                 <>
-                  {tasks.map((state, i) => (
-                    <tr onClick={() => {
-                      setOpenDetails(true);
-                    }}>
+                {tasks.map((state, i) => (
+                    <tr key={i} onClick={() => setOpenDetails(true)}>
                       <td className="name-content">
+                        <input
+                          type="checkbox"
+                          className="checkbox"
+                          label="Value 2"
+                          value={checkedTwo}
+                          onChange={handleChangeTwo}
+                        />
                         <ul className="tasklists">
                           <li className="list1">
                             <strong>Babajide Eniafe</strong>
@@ -96,8 +122,13 @@ export default function TaskList() {
                           {state.status}
                         </div>
                       </td>
-                      <td className="project-container"><div className="sucess">
-                        {state.status ==='completed'? <img src={img25} className="sucess" alt=""/> : <img src={img26} className="sucess" alt=""/>}
+                      <td className="project-container">
+                        <div className="sucess3">
+                          {state.status === "completed" ? (
+                            <img src={img25} className="" alt="" />
+                          ) : (
+                            <img src={img26} className="" alt="" />
+                          )}
                         </div>
                       </td>
                     </tr>
@@ -107,8 +138,8 @@ export default function TaskList() {
             </tbody>
           </table>
           <Modal open={OpenDetails}>
-        <TaskDetails setOpenDetails={setOpenDetails} />
-      </Modal>
+            <TaskDetails setOpenDetails={setOpenDetails} />
+          </Modal>
         </div>
       )}
     </>

@@ -45,21 +45,70 @@ body {
     margin-bottom: 0.591em;
     box-sizing: border-box;
     border-radius: 1.067em;
+    cursor: pointer;
 }
-.column1 {
-    box-sizing: border-box;
+.column-clicked  {
+    background-color: #001C80;
     display: flex;
     justify-content: left;
-    align-items: stretch;
+    align-items: left;
     gap: 0.889em;
-    padding:0.473em 0.938em;
+    padding:0.473em  0.938em;
     margin-bottom: 0.591em;
-     border-radius: 1.067em;
-    background: #001C80;
- }
-.column:hover {
+    box-sizing: border-box;
+    border-radius: 1.067em;
+    cursor: pointer;
+}
+.column-form {
+    background-color: #001C80;
+    display: flex;
+    flex-direction: row; 
+    gap: 0.709em;
+    padding: 0.473em 0.508em 0.473em 0.999em;
+    margin-bottom: 0em;
+    box-sizing: border-box;
+    border-radius: 1.067em;
+    cursor: pointer;
+  }
+  
+  .form-dropdown {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 8.625em;
+    height: 0;
+    padding-left: 0px;
+    justify-content: flex-start; 
+    align-items: center;
+    margin-bottom: 0.43em;
+  }
+  
+  .form-dropdown-open {
+    height: 99px; 
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    width: 8.625em;
+    padding-left: 0px;
+    justify-content: flex-start; 
+    align-items: center;
+    margin-bottom: 0.43em;
+  }
+  
+.column:hover{
     background-color:#001C80 ;
 }
+.column .a:hover{
+    color: #e7eaef;
+}
+.column-form:hover{
+    background-color:#001C80 ;
+}
+.column-form .a:hover{
+    color: #e7eaef;
+}
+
+
 .icons {
     display: flex;
     width: 1.186em;
@@ -74,18 +123,89 @@ body {
 .nav .a{
     text-decoration: none;
     color: #091E42;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.830em;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.895em;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
+.button-text-opened {
+    text-decoration: none;
+    color: #e7eaef;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.895em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: none;
+    border: none;
+}
+.button-text{
+    text-decoration: none;
+    color: #091E42;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.895em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: none;
+    border: none;
+}
 .nav .a1{
     text-decoration: none;
     color: #e7eaef;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.875em;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.895em;
     font-style: inherit;
     font-weight: 550;
     line-height: normal;
+}
+
+.form-list{
+    list-style: disc;
+    padding-left: 1.55em;
+    gap: 0.6em;
+}
+.form-column {
+    width: 70%;
+    height: 0;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    gap: 0.689em;
+    padding:0.373em  0.938em;
+    margin-bottom: 0.891em;
+    box-sizing: border-box;
+    border-radius: 1.067em;
+    cursor: pointer;
+}
+.form-column-e {
+    width: 70%;
+    height: 0;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    gap: 0.689em;
+    padding:0.373em  0.938em;
+    margin-bottom: 1.491em;
+    box-sizing: border-box;
+    border-radius: 1.067em;
+    cursor: pointer;
+}
+.a-form{
+    text-decoration: none;
+    color: #091E42;
+    font-size:0.775em ;
+}
+.a-form-clicked{
+    text-decoration: none;
+    color: #53B0CC;
+    font-size:0.775em ;
+}
+
+.icons-form{
+    width: 0.52em;
+    height: 0.52em;
+    flex-shrink: 0;
+    margin-top: 0.3em;
 }

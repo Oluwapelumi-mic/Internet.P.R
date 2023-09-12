@@ -4,6 +4,8 @@ import "./App.css";
 import SideNav from "./components/sideNav";
 import Header from "./components/Header";
 import TaskList from "./components/Tasks/TaskList";
+import TrainingList from "./components/Trainings/TrainingList";
+import LeaveList from "./components/Leaves/LeaveList";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Header />
           <Routes>
             <Route path="/task" element={<TaskList />} />
+            <Route path="/leave" element={<LeaveList />} />
+            <Route path="/training" element={<TrainingList />} />
           </Routes>
         </div>
       </Router>

@@ -1,40 +1,39 @@
 import React from "react";
-import Modal from "./Modals";
+import Modal from "../Tasks/Modals";
 import { img13, img14 } from "./../../images";
 import { useState } from "react";
-import CreateTask from "./CreateTask";
+import CreateLeave from "./CreateLeave";
 
 
-export default function TaskHeader({setTasks, itemCount}) {
-  const [openTask, setOpenTask] = useState(false);
-
+export default function LeaveHeader({ setLeave, itemCount }) {
+  const [openLeave, setOpenLeave] = useState(false);
 
   return (
     <div className="task-header">
       <div className="TaskCount">
-        <p className="one">Task </p>
+        <p className="one">Leave </p>
         <button className="count">{itemCount}</button>
       </div>
-      <div className="buttons">
+      <div className="buttons-training">
         <div className="export-container">
           <img src={img13} className="export-image" alt="" />
           <a href="./export" className="export">
             Export
           </a>
         </div>
-        <div className="create-container">
+        <div className="create-training-container">
           <img src={img14} className="create-image" alt="" />
           <button
-            className="create"
+            className="create-training"
             onClick={() => {
-              setOpenTask(true);
+              setOpenLeave(true);
             }}
           >
-            Create Task
+            Apply For Leave
           </button>
         </div>
-        <Modal open={openTask} >
-        <CreateTask setOpenTask={setOpenTask} setTasks={setTasks}/>
+        <Modal open={openLeave} >
+        <CreateLeave setOpenLeave={setOpenLeave} setLeave={setLeave}/>
         </Modal>
       </div>
     </div>

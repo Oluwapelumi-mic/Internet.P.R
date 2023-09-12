@@ -1,40 +1,38 @@
 import React from "react";
-import Modal from "./Modals";
+import Modal from "../Tasks/Modals";
 import { img13, img14 } from "./../../images";
 import { useState } from "react";
-import CreateTask from "./CreateTask";
+import CreateTraining from "./CreateTraining";
 
 
-export default function TaskHeader({setTasks, itemCount}) {
-  const [openTask, setOpenTask] = useState(false);
-
-
+export default function TrainingHeader({setTrainings, itemCount}) {
+  const [openTraining, setOpenTraining] = useState(false);
   return (
     <div className="task-header">
       <div className="TaskCount">
-        <p className="one">Task </p>
+        <p className="one">Training </p>
         <button className="count">{itemCount}</button>
       </div>
-      <div className="buttons">
+      <div className="buttons-training">
         <div className="export-container">
           <img src={img13} className="export-image" alt="" />
           <a href="./export" className="export">
             Export
           </a>
         </div>
-        <div className="create-container">
+        <div className="create-training-container">
           <img src={img14} className="create-image" alt="" />
           <button
-            className="create"
+            className="create-training"
             onClick={() => {
-              setOpenTask(true);
+              setOpenTraining(true);
             }}
           >
-            Create Task
+            Apply for Training
           </button>
         </div>
-        <Modal open={openTask} >
-        <CreateTask setOpenTask={setOpenTask} setTasks={setTasks}/>
+        <Modal open={openTraining} >
+        <CreateTraining setOpenTraining={setOpenTraining} setTrainings={setTrainings}/>
         </Modal>
       </div>
     </div>
